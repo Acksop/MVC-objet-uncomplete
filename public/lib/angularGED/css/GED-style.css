@@ -1,0 +1,130 @@
+.title {
+	  height: 30px;
+	  margin-top: 25px;
+}
+
+.title p {
+	font-family: Arial, sans-serif;	
+	font-size: 30px;
+	font-weight: 600;
+	color: rgb(116, 157, 174);
+}
+
+ul {
+  font-size: 17px;
+  font-weight: 600;  
+  padding-left: 0;
+}
+
+ul>li {
+	display: inline;
+	padding-right: 20px;
+}
+
+ul>li a {
+	color: #FFFFFF;
+}
+
+ul>li a:visited{
+	color: #EEE;
+}
+
+ul>li a:hover{
+	text-decoration: none;
+	color: #FFFFFF;
+	border-top: 15px solid white;
+	border-bottom: 12px solid white;
+	padding-bottom: 12px;
+	padding-top: 12px;
+}
+ul>li a:active,ul>li a:focus {
+	border-top: 15px solid white;
+	border-bottom: 12px solid white;
+	border-radius: 2px;
+}
+
+.top-menu-header>div>ul>li a:visited{
+	border-top: 50px solid lightgreen;
+	border-bottom: 25px solid lightgreen;
+	color: #EEE;
+}
+
+.top-menu-header>div>ul>li a:hover{
+	border-top: 50px solid darkgreen;
+	border-bottom: 25px solid darkgreen;
+}
+
+.top-menu-header>div>ul>li a:active{
+	border-top: 50px solid darkgreen;
+	border-bottom: 25px solid darkgreen;
+	border-radius: 5px;
+}
+
+.actived-menu{
+	border-top: 50px solid lightgreen;
+	border-bottom: 25px solid lightgreen;
+	color: #EEE;
+}
+
+p {
+	font-family: Arial, sans-serif;
+	font-weight: 600;
+	color: rgb(158, 165, 171);
+	padding-bottom: 10px;
+}
+
+img.banniere{
+	border-top: 10px solid darkred;
+	border-right: 10px solid darkred;
+	border-left: 10px solid darkred;
+	padding: 2%;
+	margin: 0px;
+	align: center;
+	height:auto;
+	width:100%;
+	max-width: auto;
+}
+
+.top-menu-header {
+	height: 70px;
+  	padding-top: 25px;
+  	background-color: steelblue;
+  	margin-bottom: 20px;
+}
+
+.top-menu-header>div {
+	padding-left: 0;
+}
+.menu-header {
+	height: 70px;
+  	padding-top: 25px;
+  	background-color: lightskyblue;
+  	margin-bottom: 20px;
+}
+
+.menu-header>div {
+	padding-left: 0;
+}
+.title-header {
+	height: auto;
+  	padding: 5px;
+  	text-align:right;
+  	font-weight: bolder;
+  	color: darkgreen;
+  	width: 100%;
+  	background-color: white;
+  	border: 10px solid darkred ; 
+}
+
+.footer-menu {
+	height: 450px;
+	width: 100%;
+	text-align: center;
+  	padding-top: 200px;
+  	background-color: cadetblue;
+  	margin-bottom: 0px;
+}
+
+.footer-menu>a {
+	
+}

@@ -1,0 +1,19 @@
+FROM: http://www.gnu.org/licenses/license-compatibility.fr.html
+AT; 03:54 - 19 August 2016
+
+
+[...]
+
+Nous divisons les licences en trois classes : laxiste (également appelée « permissive » ou « bonne poire »), intermédiaire et copyleft. Une licence laxiste ne fait rien qui interfère avec l'intégration du code qu'elle régit à un logiciel privateur. Une licence copyleft interdit cette opération en exigeant que tout programme réutilisant ce code soit régi par la même licence. Une licence intermédiaire pose certaines conditions à l'ajout de code privateur mais n'essaie pas de l'interdire.
+
+En général les licences permissives ou laxistes (BSD modifiée, X11, Expat, Apache, Python, etc.) sont compatibles l'une avec l'autre, parce qu'elles n'ont pas d'exigence concernant le code tiers qui est ajouté au programme. Elles vont jusqu'à permettre de placer l'ensemble du programme (éventuellement modifié) dans un logiciel privateur ; c'est pourquoi nous les appelons « licences bonnes poires » : elle ne savent pas dire non quand un utilisateur essaie de priver les autres de leurs libertés.
+
+Dans une combinaison de programmes sous licences laxistes, chaque partie conserve sa licence d'origine. Lorsque le code est fusionné à un point tel que les parties ne peuvent plus être identifiées, ce code doit porter toutes les licences des parties fusionnées. Puisque de toute façon toutes les licences sont laxistes, cela ne crée aucun problème pratique, à part la longueur de la liste de licences (2).
+
+De la même manière, les licences laxistes sont habituellement compatibles avec n'importe quelle licence copyleft. Dans un programme combiné, les parties qui à l'origine étaient sous des licences laxistes les conservent et l'ensemble du programme combiné est sous la licence copyleft. Une licence laxiste particulière, Apache 2.0, a des clauses concernant les brevets qui sont incompatibles avec la version 3 de la GPL ; comme je pense que ces clauses sont bonnes, j'ai rendu la GPL version 3 compatible avec elles.
+
+La seule exception remarquable est la licence BSD d'origine, avec son odieuse « clause publicitaire ». Cette condition exigeait un avis spécial dans toute publicité pour tout produit contenant tout code publié sous la licence BSD d'origine. C'était, et cela reste, incompatible avec toutes les vraies licences copyleft. De plus, c'était la galère pour chaque distribution, qui voyait s'accumuler des programmes ayant des exigences similaires mais différentes en ce qui concerne la publicité. À un moment donné, une distribution BSD nécessitait 70 avis différents.
+
+J'ai à peu près éliminé ce problème en convainquant le doyen Hal Varian de faire en sorte que l'Université de Californie à Berkeley publie la « licence BSD modifiée » (sans clause publicitaire) et republie le code de la distribution système de Berkeley (BSD) sous cette dernière licence. De nos jours, la licence BSD d'origine est (heureusement) rarement utilisée, mais nous devons toujours veiller à ne pas parler de la « licence BSD ».
+
+[..]

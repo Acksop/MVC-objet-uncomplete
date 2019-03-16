@@ -1,0 +1,47 @@
+------
+
+**GOOD** //GLAD// __SEEING__ ##MONOSPACE## ---
+@@DEL@@
+££ADD££
+http://wikini.besancon25.fr
+
+== mon titre en H5 ==
+=== mon titre en H4 ===
+==== mon titre en H3 ====
+===== mon titre en H2 =====
+====== mon titre en H1 ======
+
+		.une indentation qui se met juste après un paragraphe
+		.pour lui donner une certaine emphase ...
+
+
+
+	+indentation 1
+		-indentation 2
+			a) indentation 3
+			b) indentation 3
+		-indentation 2
+			1) indentation 3
+			2) indentation 3
+		-indentation 2
+		-indentation 2
+			i) indentation 3
+			ii) indentation 3
+		-indentation 2
+			A) indentation 3
+			B) indentation 3
+	+indentation 1
+
+
+Et voici une action: <<img>> appel depuis le fichier .wym
+
+{{img src="http://besancon25.fr/images/B25.jpg" style="display:block;float:center;"}}
+
+-------------------------------
+	to edit: http://poo.formation.dev/acceuil/wikini/example/WYMD/edit
+-------------------------------
+	
+	
+	
+	
+	

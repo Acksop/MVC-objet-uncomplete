@@ -1,0 +1,15 @@
+<pre>$location.path() = {{$location.path()}}</pre>
+<pre>$route.current.templateUrl = {{$route.current.templateUrl}}</pre>
+<pre>$route.current.params = {{$route.current.params}}</pre>
+<pre>$route.current.scope.name = {{$route.current.scope.name}}</pre>
+<pre>$routeParams = {{$routeParams}}</pre>
+<div>
+	<div>
+		<label>inscrire une chaine ici :</label> <input ng-model="machaine">
+		<p>Binding de "ma chaine" : {{machaine}}</p>
+	</div>
+	<div>
+		<label>inscrire un entier ici :</label> <input ng-model="monEntier" ng-change="calculer()">
+		<p>voici l'entier multipliée par deux : {{monEntierFoisDeux}}</p>
+	</div>
+</div>

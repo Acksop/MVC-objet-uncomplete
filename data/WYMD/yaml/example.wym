@@ -1,0 +1,31 @@
+"symfony 1.0":
+      end_of_maintainance: 2010-01-01
+      is_stable:           true
+      release_manager:     "Grégoire Hubert"
+      description: >
+        This stable version is the right choice for projects
+        that need to be maintained for a long period of time.
+      latest_beta:         ~
+      latest_minor:        1.0.20
+      supported_orms:      [Propel]
+      archives:            { source: [zip, tgz], sandbox: [zip, tgz] }
+
+"symfony 1.2":
+      end_of_maintainance: 2008-11-01
+      is_stable:           true
+      release_manager:     'Fabian Lange'
+      description: >
+        This stable version is the right choice
+        if you start a new project today.
+      latest_beta:         null
+      latest_minor:        1.2.5
+      supported_orms:
+        - Propel
+        - Doctrine
+      archives:
+        source:
+          - zip
+          - tgz
+        sandbox:
+          - zip
+          - tgz

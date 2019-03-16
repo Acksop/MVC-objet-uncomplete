@@ -1,0 +1,65 @@
+<!doctype html>
+<!-- paulirish.com/2008/conditional-stylesheets-vs-css-hacks-answer-neither/ -->
+<!--[if lt IE 7]> <html class="no-js lt-ie9 lt-ie8 lt-ie7" lang="en"> <![endif]-->
+<!--[if IE 7]>    <html class="no-js lt-ie9 lt-ie8" lang="en"> <![endif]-->
+<!--[if IE 8]>    <html class="no-js lt-ie9" lang="en"> <![endif]-->
+<!-- Consider adding a manifest.appcache: h5bp.com/d/Offline -->
+<!--[if gt IE 8]><!--> <html lang="fr"> <!--<![endif]-->
+
+<head>
+  <?php include INCLUSIONS_HTML_PATH . DIRECTORY_SEPARATOR
+		   . $this->page['template'] . DIRECTORY_SEPARATOR
+		   . "head.phtml" ?>
+</head>
+
+<body>
+	<?php include INCLUSIONS_HTML_PATH
+		 . DIRECTORY_SEPARATOR . $this->page['template']
+		 . DIRECTORY_SEPARATOR . "top-javascript.phtml" ?>
+  <!-- Prompt IE 6 users to install Chrome Frame. Remove this if you support IE 6.
+       chromium.org/developers/how-tos/chrome-frame-getting-started -->
+  <!--[if lt IE 7]><p class=chromeframe>Your browser is <em>ancient!</em> <a href="http://browsehappy.com/">Upgrade to a different browser</a> or <a href="http://www.google.com/chromeframe/?redirect=true">install Google Chrome Frame</a> to experience this site.</p><![endif]-->
+  
+  <header>
+		<?php include INCLUSIONS_HTML_PATH . DIRECTORY_SEPARATOR
+				 . $this->page['template'] . DIRECTORY_SEPARATOR
+				 . "html5_header.phtml" ?>
+  </header>
+  
+  <menu>
+		<?php include INCLUSIONS_HTML_PATH . DIRECTORY_SEPARATOR
+				 . $this->page['template'] . DIRECTORY_SEPARATOR
+				 . "html5_menu.phtml" ?>
+  </menu>
+  
+  <?php include INCLUSIONS_HTML_PATH  . DIRECTORY_SEPARATOR . $this->page['template'] . DIRECTORY_SEPARATOR . "body.phtml" ?>
+  
+  <aside>
+		<?php include INCLUSIONS_HTML_PATH . DIRECTORY_SEPARATOR
+		 . $this->page['template'] . DIRECTORY_SEPARATOR
+		  . "html5_aside.phtml" ?>
+  </aside>
+  <footer>
+		<?php include INCLUSIONS_HTML_PATH . DIRECTORY_SEPARATOR
+		 . $this->page['template'] . DIRECTORY_SEPARATOR
+		  . "html5_footer.phtml" ?>
+  </footer>
+
+	<?php include INCLUSIONS_HTML_PATH
+		 . DIRECTORY_SEPARATOR . $this->page['template']
+		 . DIRECTORY_SEPARATOR . "bottom-javascript.phtml" ?>
+</body>
+
+</html>
+
+		<!-- Normaly Javascript must be not put here ? Is'nt it real that HTML 5 have a lot to learn ? -->
+		<!-- PHP too, just think of that: method ( public or private functions class ) should have their own syntax, like:
+				. 	for method
+				:: 	for not-in-a-context-method (static method or: function when they are in a collection of !)
+				->	for variable call
+				
+				Does French Acksop have right, Rasmus ?
+				
+				I really like the wrapper in php... does they can have same problems like eval()
+				I was really impress about the once-not-recursivity of eval(:_:)
+		-->

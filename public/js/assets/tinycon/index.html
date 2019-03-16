@@ -1,0 +1,27 @@
+<html>
+	<head>
+		<link rel="icon" href="favicon.ico">
+		<title>Ajouter une bulle d'alerte au favicon avec Tinycon</title>
+
+    <script src="tinycon.js"></script>
+<script>
+	Tinycon.setOptions({
+		width: 8,
+		height: 10,
+		font: '10px arial',
+		colour: '#fff',
+		background: '#00b830',
+		fallback: true
+	});
+
+	var count = 0;
+	
+	setInterval(function(){
+		Tinycon.setBubble(++count);
+	}, 1000);
+</script>
+	</head>
+	<body>
+	</body>
+</html>
+

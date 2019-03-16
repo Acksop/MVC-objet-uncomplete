@@ -1,0 +1,42 @@
+/* the humans responsible & colophon */
+/* humanstxt.org */
+
+
+/* TEAM */
+  <emmanuel.ory@infoartsmedia.fr>: Emmanuel ROY
+  Site: emmanuelroy.name
+  Twitter:
+  Location: Besançon ( 25000 ), France
+
+/* THANKS */
+  Names (& URL): 
+  
+  P'titLéo ( exemple Angular.js )
+  Fabus ( à permis de créer l'idée)
+  
+  IP-Formation <http://www.ecole-ipssi.com/index.php>
+  
+  Clemens Krack (Fbootstrapp)
+
+    http://twitter.com/clmnsk
+    http://github.com/ckrack
+
+  Mark Otto (Bootstrap)
+
+    http://twitter.com/mdo
+    http://github.com/markdotto
+
+  Jacob Thornton (Bootstrap)
+
+    http://twitter.com/fat
+    http://github.com/fat
+
+ FOR FBootStrap, find it at <http://ckrack.github.io/fbootstrapp/>
+ 
+ & aLL THE DEVELOPPERS For HTML5 BOILERPLATE <https://html5boilerplate.com/>
+  
+
+/* SITE */
+  Standards: HTML5, CSS3, PHP7, XML, SQL
+  Components: 
+  Software: gEdit, Eclipse, Ubuntu

@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>B25 - Test interface</title>
+<meta name="description"
+	content="Inspiration for on scroll header animations with various effects" />
+<meta name="keywords"
+	content="on scroll, animate, header, transition, css3, 3d, effect, inspiration" />
+<meta name="author" content="Codrops" />
+
+<link rel="stylesheet" type="text/css" href="css/normalize.css" />
+<link rel="stylesheet" type="text/css"
+	href="css/component-sliderMenu.css" />
+<link rel="stylesheet" type="text/css" href="css/icons.css" />
+<link rel="stylesheet" type="text/css"
+	href="css/component-headerMenu.css" />
+<link rel="stylesheet" type="text/css"
+	href="css/component-transitionRevealPage.css" />
+
+<link rel="stylesheet" type="text/css" href="css/skeleton-grid.css" />
+
+</head>
+<body id='bodyhtml' style='background: #f3efe0;'>
+
+	<div class="container">
+		<div id="st-container" class="st-content-inner">
+			<nav class="st-menu st-effect-12" id="menu-12">
+				<center>
+					<img src='img/B25/besancon25.fr.png' style='max-height: 25%;' />
+				</center>
+				<ul>
+					<li><a class="icon icon-news" href="#">Articles</a></li>
+					<li><a class="icon icon-data" href="#">Breves</a></li>
+					<li><a class="icon icon-pen" href="#">Dossiers</a></li>
+					<li><a class="icon icon-photo" href="/B25_reportages">Reportages</a></li>
+					<li><a class="icon icon-wallet" href="#">Credits</a></li>
+				</ul>
+			</nav>
+			<!-- the header that will be animated by adding the respective state class to it -->
+			<header id="ha-header" class="ha-header">
+				<div class="ha-header-perspective">
+					<div class="ha-header-front">
+						<h1>
+							<span class='rotation180'>
+								<img src='/img/B25/menu-mobile.png' width='50%' height='50%' onClick='javascript:deploy();'>
+							</span>
+							<span>
+								<img src='img/B25/mini-logo wikini.png'	style='max-height: 25%;' onClick='javascript:rotate();' />
+							</span>
+						</h1>
+						<nav>
+							<a href='/B25_annonces'>B25_COM</a>
+							<a href='/B25_evenements'>B25_NET</a>
+						</nav>
+					</div>
+					<div class="ha-header-bottom">
+						<nav>
+							<a onClick='javascript:rotateBack();'>&lt;&lt;Back</a>
+							<a href='/B25_acceuil_pro'>Access to Admin Now !</a>
+						</nav>
+					</div>
+				</div>
+			</header>
+			<div class="st-container" style='display:block;position:relative;'>
+			<?php echo $this->block_body ?>
+			</div>
+		</div>
+	</div>
+
+		<script src="js/classie.js"></script>
+		<script src="js/main-pageReveal.js"></script>
+	<script>
+		function selectionnerDIV(elem){
+			if ( document.getElementById && document.getElementById( elem ) ){
+				 Pdiv = document.getElementById( elem );
+			}
+			else if ( document.all && document.all[ elem ] ){
+				Pdiv = document.all[ elem ];
+			}
+			else if ( document.layers && document.layers[ elem ] ){
+				Pdiv = document.layers[ elem ];
+			}
+			else{
+				return false;
+			}
+			return Pdiv;
+		}
+
+			var head = selectionnerDIV('ha-header');
+			var slide = selectionnerDIV('st-container');
+			
+			function bodyClickFn(evt){
+				slide.className = 'st-container st-effect-12';
+				document.removeEventListener( 'click', bodyClickFn );
+			}
+			function rotate(){
+				head.className = 'ha-header ha-header-rotate';
+			}
+			function deploy(){
+				slide.className = 'st-container st-effect-12 st-menu-open';
+				setTimeout( function() {
+					document.addEventListener( 'click', bodyClickFn );
+				}, 25);
+			}
+			function rotateBack(){
+				head.className = 'ha-header ha-header-rotateBack';
+			}
+
+		(function() {
+			var pages = [].slice.call(document.querySelectorAll('.pages > .page')),
+			currentPage = 0,
+			
+			revealerOpts = {
+				// the layers are the elements that move from the sides
+				nmbLayers : 3,
+				// bg color of each layer
+				bgcolor : ['#0092DD', '#fff', '#3E3A35'],
+				// effect classname
+				effect : 'anim--effect-3',
+				onStart : function(direction) {
+					// next page gets class page--animate-[direction]
+					var nextPage = pages[currentPage === 0 ? 1 : 0];
+					classie.add(nextPage, 'page--animate-' + direction);
+				},
+				onEnd : function(direction) {
+					// remove class page--animate-[direction] from next page
+					var nextPage = pages[currentPage === 0 ? 1 : 0];
+					nextPage.className = 'page';
+				}
+			};
+			revealer = new Revealer(revealerOpts);
+			document.querySelector('button.pagenav__button--top').addEventListener('click', function() { reveal('top'); });
+			document.querySelector('button.pagenav__button--left').addEventListener('click', function() { reveal('left'); });
+			document.querySelector('button.pagenav__button--right').addEventListener('click', function() { reveal('right'); });
+			document.querySelector('button.pagenav__button--bottom').addEventListener('click', function() { reveal('bottom'); });
+			document.querySelector('button.pagenav__button--cornertopleft').addEventListener('click', function() { reveal('cornertopleft'); });
+			document.querySelector('button.pagenav__button--cornertopright').addEventListener('click', function() { reveal('cornertopright'); });
+			document.querySelector('button.pagenav__button--cornerbottomleft').addEventListener('click', function() { reveal('cornerbottomleft'); });
+			document.querySelector('button.pagenav__button--cornerbottomright').addEventListener('click', function() { reveal('cornerbottomright'); });
+			function reveal(direction) {
+				var callbackTime = 750,
+					callbackFn = function() {
+						classie.remove(pages[currentPage], 'page--current');
+						currentPage = currentPage === 0 ? 1 : 0;
+						classie.add(pages[currentPage], 'page--current');	
+					};
+
+				revealer.reveal(direction, callbackTime, callbackFn);
+			}
+		})();
+		</script>
+</body>
+</html>

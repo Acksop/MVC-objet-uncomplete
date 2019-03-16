@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>B25 PRO - Test interface</title>
+<meta name="description"
+	content="Inspiration for on scroll header animations with various effects" />
+<meta name="keywords"
+	content="on scroll, animate, header, transition, css3, 3d, effect, inspiration" />
+<meta name="author" content="Codrops" />
+
+<link rel="stylesheet" type="text/css" href="css/normalize.css" />
+		<link rel="stylesheet" type="text/css" href="css/component-googleNexusMenu.css" />
+		<script src="js/modernizr.custom.js"></script>
+		<script src="js/classie.js"></script>
+	</head>
+	<body>
+		<div class="container">
+			<ul id="gn-menu" class="gn-menu-main">
+				<li class="gn-trigger">
+					<a class="gn-icon gn-icon-menu"><span>Menu</span></a>
+					<nav class="gn-menu-wrapper">
+						<div class="gn-scroller">
+							<ul class="gn-menu">
+								<li class="gn-search-item">
+									<input placeholder="Rechercher" type="search" class="gn-search">
+									<a class="gn-icon gn-icon-search"><span>Recherche</span></a>
+								</li>
+								<li>
+									<a class="gn-icon gn-icon-earth">Compte</a>
+									<ul class="gn-submenu">
+										<li><a class="gn-icon gn-icon-download">Transferts</a></li>
+									</ul>
+								</li>
+								<li><a class="gn-icon gn-icon-cog">Paramètres</a></li>
+								<li><a class="gn-icon gn-icon-help">Aide</a></li>
+								<li>
+									<a class="gn-icon gn-icon-archive">Archives</a>
+									<ul class="gn-submenu">
+										<li><a class="gn-icon gn-icon-article">France 3</a></li>
+										<li><a class="gn-icon gn-icon-pictures">INA - Région</a></li>
+										<li><a class="gn-icon gn-icon-videos">Canal U</a></li>
+									</ul>
+								</li>
+							</ul>
+						</div><!-- /gn-scroller -->
+					</nav>
+				</li>
+				<li><a class="codrops-icon codrops-icon-drop" href="http://tympanus.net/codrops/?p=16030"><span>Back to the Article</span></a></li>
+			</ul>
+			<header>
+				<!-- <h1>Google Nexus Website Header</h1> -->
+			</header>
+			<section style='position:relative;display:block;top:200px;'><?php echo $this->block_body ?></section>
+			<footer>
+				<!-- <h1>Google Nexus Website Footer</h1> -->
+			</footer>
+		</div><!-- /container -->
+		<script src="js/gnmenu.js"></script>
+		<script>
+			new gnMenu( document.getElementById( 'gn-menu' ) );
+		</script>
+		
+			
+</body>
+</html>
