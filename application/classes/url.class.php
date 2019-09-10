@@ -3,7 +3,7 @@ namespace Classes;
 
 class Url
 {
-	const PHP_ACTION_VARIABLE ='--%3E';
+	const PHP_ACTION_VARIABLE ='%20--%20';
 	
 	public $page;
 	public $compteurParams;
@@ -38,6 +38,7 @@ class Url
 		$action_PhpVariables = explode( self::PHP_ACTION_VARIABLE,$urlTrim );
 		if(isset($action_PhpVariables[1])){
 			$this->page['action'] = $action_PhpVariables[1];
+			$url = $action_PhpVariables[0];
 		}
 		
 		

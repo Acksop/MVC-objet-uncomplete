@@ -38,7 +38,7 @@ Et voici une action: <<img>> appel depuis le fichier .wym
 {{img src="http://besancon25.fr/images/B25.jpg" style="display:block;float:center;"}}
 
 -------------------------------
-	to edit: http://poo.formation.dev/acceuil/wikini/example/WYMD/edit
+	to edit: http://poo.formation.localhost/acceuil/wikini/example/WYMD/edit
 -------------------------------
 	
 	

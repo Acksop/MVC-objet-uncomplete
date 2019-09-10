@@ -39,9 +39,13 @@
 			"embed1.pcss";
 
 
-for($i = 5 ; $i > 0 ; --$i){
+for($i = 6 ; $i > 0 ; --$i){
+	echo "<a href='http://poo.formation.localhost/billet/ -- article$i'> &gt;&gt; Voir seulement ce billet</a>";
 	include dirname(__FILE__) . DIRECTORY_SEPARATOR .
 			"_blocks" . DIRECTORY_SEPARATOR .
 			$this->page['name'] . DIRECTORY_SEPARATOR .
 			"article" . $i . ".phtml";
+	
+			
+			
 } 

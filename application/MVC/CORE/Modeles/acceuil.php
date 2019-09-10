@@ -30,26 +30,36 @@ $this->page['template'] = 'standart';
 $this->page['title'] = 'Accueil MVC en (Acksop -- PHP-Avancé)  ---- Human Brain ';
 $this->page['description'] = "adbracadadlabla - A New Version With-out IP-Formation & Evolutis - We\'re All Lovin\'";
 
+
+
+//WYMD DEFAULT
+/*Tous les WYMD de la page a afficher*/
+$handler = 'show';
+$this->page['Wikinitext'] = new wmdCoreFormatter('example','wikini',$handler);
+$this->page['MarkDowntext'] = new wmdCoreFormatter('example','markdown',$handler);
+$this->page['YAMLtext'] = new wmdCoreFormatter('example','yaml',$handler);
+
+//WYMD ACTIFS
+/*Le formateur pour les WYMD actifs*/
 if(isset($app->url->page['slashParams']['WYMD'])){
 	$handler = $app->url->page['slashParams']['WYMD'];
 }else{
 	$handler = 'show';
 }
+/*Les handlers des WYMD actifs*/
 if(isset($app->url->page['slashParams']['wikini'])){
 	$handlerWikini = $handler;
-}else{
-	$handlerWikini = 'show';
+	$this->page['Wikinitext'] = new wmdCoreFormatter($app->url->page['slashParams']['wikini'],'wikini',$handlerWikini);
 }
+
 if(isset($app->url->page['slashParams']['markdown'])){
 	$handlerMarkdown = $handler;
-}else{
-	$handlerMarkdown = 'show';
+	$this->page['MarkDowntext'] = new wmdCoreFormatter($app->url->page['slashParams']['markdown'],'markdown',$handlerMarkdown);
 }
+
 if(isset($app->url->page['slashParams']['yaml'])){
 	$handlerYaml = $handler;
-}else{
-	$handlerYaml = 'show';
+	$this->page['YAMLtext'] = new wmdCoreFormatter($app->url->page['slashParams']['yaml'],'yaml',$handlerYaml);
 }
-$this->page['Wikinitext'] = new wmdCoreFormatter('example','wikini',$handlerWikini);
-$this->page['MarkDowntext'] = new wmdCoreFormatter('example','markdown',$handlerMarkdown);
-$this->page['YAMLtext'] = new wmdCoreFormatter('example','yaml',$handlerYaml);
+
+

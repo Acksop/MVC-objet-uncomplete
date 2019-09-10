@@ -89,7 +89,18 @@ class Vue{
 				." Veuillez la créer dans le répertoire CORE correspondant !";
 		}
 		
-			/*ENFIN ON MET LE TOUT DANS UNE VARIABLE QUI SERA APPELLEE PAR LE TEMPLATE*/
+		/*ON LANCE L'ACTION CORRESPONDANTE SI ELLE EXISTE DASN LE CAS D4UN FICHJIER CONDENSÉ*/
+		
+		if($ctr->modele->url->page['action'] !== ''){
+			
+			$ctrlClass = new $ctr->modele->url->page['name']($ctr);
+			
+			$ctrlClass->{$ctr->modele->url->page['action']}();	
+			
+		}
+		
+		/*ENFIN ON MET LE TOUT DANS UNE VARIABLE QUI SERA APPELLEE PAR LE TEMPLATE*/
+		
 		$this->block_body = ob_get_contents();
 		
 		ob_end_clean();
