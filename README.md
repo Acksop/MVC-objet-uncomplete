@@ -7,9 +7,6 @@ premier projet MVC en POO - debuté avec une formation Lyonnaise - IP-formation
 continué depuis avril 2015 après une correction d'un MVC d'un collègue de Besançon
 fortifié par un ensemble de libraires en bordel .
 
-emmanuel.roy@live.fr || acksop@gmail.com
-
-
 Listes de cheminement possible de la future structure pour la GED
 
 1. la gestion de la classe URL beacoup plus poussé avec un rewriting d'url
