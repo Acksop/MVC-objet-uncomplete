@@ -1,5 +1,5 @@
 # MVC---MultipleOutput---Objet
-an implementation of MVC--Objet pour optimiser les sorties selon le naviguateur utilisé
+an implementation of MVC--Objet pour optimiser les sorties selon le navigwateur utilisé
 
 projet POO - Full Stack MVC with addition on angular.js
 
